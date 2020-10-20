@@ -1,0 +1,41 @@
+﻿<Window x:Class="Client_Windows10.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client_Windows10"
+        mc:Ignorable="d"
+        Title="Register" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="2" Grid.Row="1" FontSize="20">Username</TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="3" FontSize="20">Password</TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="5" FontSize="20">Email</TextBlock>
+        <TextBox x:Name="username_txt_box" Grid.Column="3" VerticalAlignment="Stretch" Grid.Row="1" Width="150"  Text="user">
+        </TextBox>
+        <TextBox x:Name="email_txt_box" Grid.Column="3" VerticalAlignment="Stretch" Grid.Row="5" Width="150"  Text="abc@email.com">
+        </TextBox>
+        <PasswordBox x:Name="password_box" Grid.Column="3" Grid.Row="3" Width="150" Password="Password@123"/>
+        <Button Grid.Column="3"  Grid.Row="6" Content="Cancel" Height="50" Click="Cancel_Click" Margin="10,15,10,15" />
+        <Button Grid.Column="2"  Grid.Row="6" Content="Register" Height="50" Click="Register_Click" Margin="10,15,10,15" />
+    </Grid>
+</Window>
